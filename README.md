@@ -18,3 +18,25 @@
 * Now in previousAppdata dataset, we look up for the null values.
 * Then we merge both of these dataset using left merge on SK_ID_CURR.
 * Now we crosstab different columns with 'NAME_CONTRACT_STATUS' and plotted bar graph for each which gives us a knowledge about status of clients on based of different criterion on which the bank can take there decisions.
+### Results
+* We provided the bank with different kinds of graph for defaulters and non-defaulters according to our analyis by the help of which they can decide whomsoever they want to lend the loan.
+
+
+## Clustering
+### Objective
+* We have been provided with different types of datasets of multiple socio-economic and health factors of different countries around the world by NGO. We have to find those countries which are in dire need of help by analyzing different factors we have been provided to divide countries in different group with the help of clustering.
+### Steps taken during analysis
+* First step in any analysis is importing libraries and understanding the dataset provided to us. (Understanding the data involves looking up to its different features like, 'Describe' 'Shape' 'info' and finding null values)
+* Now we change values in three columns to get exact value for analysis, because the columns import, export and health they are given as %age of the GDP per capita, so we multiply these columns with the GDPP columns(which itself is divided by 100 before multiplying) to get the required values.
+* After that we make a list of columns and we drop the country. Then we plot the distplot of each columns to find out the distribution of data in each column.
+* Then we look up for co-relation in each column by using 'corr()'. We plot the heatmap for these columns to have a better understanding of co-relation.
+* Looking for outliers by plotting box plot for each column. And treating the outliers by doing soft capping of them, but during the soft capping we have to look for the outliers which does not effect the results of our analysis.(For child_mort, inflation, total_fer we only do soft capping for the lower limit outliers and for others we treat the outliers from the upper limit)
+* As we move on to do the clustering, we need to define the hopinks using the 'def' function. And then pass our dataset from it.
+* Then we create a new dataframe by performing  fit and transform on the dataframe passed by the hopkins.
+* We can do the clustering with different methods. First being the silhouette_score.
+* We find the silhouette_score for the dataframeand plot the graph for it and using this graph we define the Kmeans value or the number of clusters.
+* Moving on to find the cluster centers and then providing them with the labels. Then we add a new label coulmn in the dataframe with the values of labels for the cluster centers and we can see that the data are divided into 3 different clusters by using value count function.
+* Then we scatterplot for the three main values (i.e; child_mort, gdpp, income), and a boxplot with all these values to find out the cluster which is the most needfull group of countries.
+* Second method of clustering be linkage method, we then performed the single and complete linkage to define the number of clusters, this method is more usefull when we have a better business idea  beacause we can choose the number of clusters according to our need.
+### Results
+* After doing the analysis of the data provided, we can see an outcome of three different clusters from both the methods of clustering, one can now easily choose the cluster of countries which are in the dire need of help.
