@@ -40,3 +40,49 @@
 * Second method of clustering be linkage method, we then performed the single and complete linkage to define the number of clusters, this method is more usefull when we have a better business idea  beacause we can choose the number of clusters according to our need.
 ### Results
 * After doing the analysis of the data provided, we can see an outcome of three different clusters from both the methods of clustering, one can now easily choose the cluster of countries which are in the dire need of help.
+
+
+## Lead score
+### Objective
+* We have to build a logistic regression model to assign a lead score between 0 and 100 to each of the leads which can be used by the company to target potential leads. A higher score would mean that the lead is hot, i.e. is most likely to convert whereas a lower score would mean that the lead is cold and will mostly not get converted. There are some more problems presented by the company which our model should be able to adjust to if the company's requirement changes in the future so we will need to handle these as well.
+### Steps involved in the analysis
+1. Reading	of	data
+* Data	was	provided	in	form	of	csv	which	was	read to get a better understanding and performing the analysis.
+2. Cleaning	of	data
+* a. The	data	set	contained	missing	values
+* b. Columns	with	more	than	75%	missing	values	were	dropped
+* c. Some columns	 were	 replaced	 with	 mean,	 some	 with	 mode	 and	some	with	na
+3. Data	Analysis
+* a. EDA	helped	in	getting	imbalnce	data
+* b. Relationship	with	conversion
+4. Data	Preparation	for	Modelling
+* a. Binary	results	were	converted	to	1/0
+* b. Dummy	variables	were	introduced
+* c. Outliers	were	capped
+* d. Correlated	features	were	removed
+5. Data	Modelling
+* a. Data	was	split	into	training	and	test	data	set	in	ratio	70:30
+* b. Feature	selection	was	done	using	RFE
+* c. Model	was	improved	by	using	statsmodel
+* d. Model	was	build	
+* e. Test	data	were	executed	on	the	model
+6. Prediction	was	done	for	the	data	and	lead	scores	were	calculated
+7. Accuracy,	Sensitivity,	Specificity	was	calculated
+* a. Training	data:	
+* accuracy	:	90%
+* sensitivity:	89%	
+* specificity:	91%	
+* b. Test	data:	
+* accuracy	:	90%		
+* sensitivity:	88%	
+* specificity:91%
+### Result
+* We provided an additional column named lead score to have a better understanding of conerted leads.
+* Tags	to	focus	on:
+* Switched	off,Busy ,Lost	to	EINS, Identify	people	with	null	values	for	tags	and	Leads	profile
+* Focus	on	Lead	Sources	from	Welingak	Website
+
+
+
+
+
