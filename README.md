@@ -82,6 +82,27 @@
 * Switched	off,Busy ,Lost	to	EINS, Identify	people	with	null	values	for	tags	and	Leads	profile
 * Focus	on	Lead	Sources	from	Welingak	Website
 
+## Linear regression
+### Objective
+* We are required to model the demand for shared bikes with the available independent variables.  So, it can be used by the management to understand how exactly the demands vary with different features. They can accordingly manipulate the business strategy to meet the demand levels and meet the customer's expectations. Further, the model will be a good way for management to understand the demand dynamics of a new market. 
+### Steps involved in the analysis
+* 1. Reading	of	data
+ * Data	was	provided	in	form	of	csv	which	was	read to get a better understanding and performing the analysis.
+* 2. Cleaning	of	data
+ * a. The data	set contains many integer variables which should be objects, by looking up to data dictionary we can see and assign those values to the data set.
+ * b. Columns like Season, Year, Month, Holiday, Weekday, working day, Weathersit were replaced with correct inserted values to get proper results.
+* 3. Data	Analysis
+ * a. We pulled out all  the variable columns and plotted a distplot for each of them to see the distribution of data.
+ * b. Then we pulled all the categorical column and plotted a boxplot for each.
+ * c. Again we took all the variables columns and plot a pairplot for them to find a better idea of co-relation.
+ * d.  Then we plot a heatmap for the co-relation. Regarding these co-relation and our previous knowledge of the dataset we drop some columns and move on to the regression model.
+ * e. For the regression model,  we firstly need to scale all the values to the standard  value, and for that we use sklearn library and import Standard scaler for scaling of data.
+ * f. The we used train test split to split our data into Xtrain and Ytrain  for performing regression model.
+ * g. Then we found out the regression coefficient for each column and found out the r_2 score.
+ * h. Then we used RFE to build the model and test the model till we find all p-values < 0.05 .
+### Results
+ * A Linear regression model was made to fit the requirements of the Company.
+
 
 
 
